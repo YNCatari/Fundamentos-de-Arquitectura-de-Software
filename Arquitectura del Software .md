@@ -1,4 +1,4 @@
-# Examen Diseño y Arquitectura de Software
+# Diseño y Arquitectura de Software
 ## Estilos
 - Capas  (con frecuencia de tres capas)
 - Modelo-Vista-Controlador
