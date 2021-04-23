@@ -130,7 +130,7 @@ componente y su entorno.
 ### Propiedades no funcionales
 > La especificación de estas propiedades es necesaria para simular la conducta de runtime, analizar la conducta de los componentes, imponer restricciones, mapear implementaciones sobre procesadores determinados, etcétera. 
 
-Atributos de Calidad /Escenarios de calidad
+### Atributos de Calidad /Escenarios de calidad
 Para identificar los escenarios de calidad se seguirá la siguiente estructura:
 
 	1. Fuente del estímulo: quien o que genera el estímulo. 
