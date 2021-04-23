@@ -129,3 +129,183 @@ componente y su entorno.
 
 ### Propiedades no funcionales
 > La especificación de estas propiedades es necesaria para simular la conducta de runtime, analizar la conducta de los componentes, imponer restricciones, mapear implementaciones sobre procesadores determinados, etcétera. 
+
+Atributos de Calidad /Escenarios de calidad
+Para identificar los escenarios de calidad se seguirá la siguiente estructura:
+
+	1. Fuente del estímulo: quien o que genera el estímulo. 
+	2. Estímulo: lo que se quiere llevar a cabo.
+	3. Entorno: condiciones dentro de las cuales se presenta el estímulo.
+	4. Artefacto: parte del sistema que recibe el estímulo.
+	5. Respuesta: actividad que ocurre luego de la llegada del estímulo.
+	6. Medida de la Respuesta: criterio para testear el requerimiento.
+	7. Atributo de calidad afectado: Atributo de calidad relacionado con el escenario
+
+Escenario de flexibilidad:
+	
+“El contratista desea hacer unas modificaciones en el sistema antes de su versión final”
+
+	1. Fuente: Contratista
+	2. Estímulo: Modificaciones en el proyecto
+	3. Entorno: Sistema casi finalizado (aun en tiempo de diseño)
+	4. Artefacto: Código
+	5. Respuesta: Cambios realizados sin excesiva dificultad y sin efectos secundarios
+	6. Medida de la Respuesta: Los cambios deben hacerse en el menor tiempo posible
+	7. Atributo de calidad afectado: AT01
+
+Escenario de Modificabilidad
+
+El sistema debe estar abierto a la hora de realizar cambios en los algoritmos y métodos de los que se compone, sin perjudicar la funcionalidad que este ya posee.
+
+	1. Fuente: agregación o actualización de un algoritmo
+	2. Estímulo: cambio de versión del algoritmo
+	3. Entorno: Explotación
+	4. Artefacto: Sistema
+	5. Respuesta: Actualización del algoritmo del sistema
+	6. Medida de la Respuesta: numero de paquetes procesados con el nuevo algoritmo
+	7. Atributo de calidad afectado: AT02
+
+Escenario de Rendimiento
+
+El sistema deberá facilitar un mínimo de información al mes, con la finalidad de que los usuarios no dejen de utilizar el portal por inanición. 
+
+	1. Fuente: Actualización de la información
+	2. Estímulo: Actividad en la pagina web
+	3. Entorno: Explotación
+	4. Artefacto: Pagina web
+	5. Respuesta: Se incrementa el numero de visitas e interacción en la página 
+	6. Medida de la Respuesta: numero de visitas a la pagina
+	7. Atributo de calidad afectado: AT03
+
+Escenario de Testabilidad
+
+El sistema deberá facilitar la realización de pruebas sobre si los cálculos de los datos estadísticos realizados por los algoritmos son correctos, o de si la información obtenida es veraz.
+
+	1. Fuente: Operaciones de pruebas
+	2. Estímulo: Operaciones de comunicación de datos 
+	3. Entorno: Explotación
+	4. Artefacto: Pagina web y servidor
+	5. Respuesta: log con los cálculos realizados sobre los datos
+	6. Medida de la Respuesta: es posible trazar las operaciones relacionadas con los cálculos
+	7. Atributo de calidad afectado: AT04
+
+Escenario de Seguridad
+
+El sistema deberá impedir, en la medida de todo lo posible , los fallos de seguridad como intrusos que puedan acceder a la pagina web haciéndose pasar por usuarios con determinados permisos dentro de esta, o el acceso a los datos, pudiendo modificarlos, borrarlos o extraerlos.
+
+	1. Fuente: Acceso a la información privada o intrusión 
+	2. Estímulo: Restringir acceso a datos 
+	3. Entorno: Explotación
+	4. Artefacto: Pagina web, servidor y base de datos
+	5. Respuesta: Acceso mediante claves seguras
+	6. Medida de la Respuesta: numero de intrusiones y acceso a datos de forma ilícita:0
+	7. Atributo de calidad afectado: AT05
+
+Escenario de Confiabilidad
+
+La pagina web deberá proteger que los equipos de los usuarios queden infectados con virus al acceder a la pagina web, protegiéndolos de cross site scripting o que los datos descargables contengan algún tipo de software malicioso.
+
+	1. Fuente: Equipos de los usuarios
+	2. Estímulo: Acceso a la pagina o descarga de datos
+	3. Entorno: Explotación
+	4. Artefacto: Pagina web
+	5. Respuesta: Aumento de la seguridad de la pagina web
+	6. Medida de la Respuesta: numero de reportes sobre malware:0
+	7. Atributo de calidad afectado: AT06
+
+Escenario Time to market
+
+Los desarrolladores deben implementar el sistema en el menor tiempo posible
+ 
+	1. Fuente: Desarrolladores
+	2. Estímulo: Implementación rápida del sistema
+	3. Entorno: Sistema en desarrollo
+	4. Artefacto: Código
+	5. Respuesta: El sistema estará disponible en un margen de tiempo razonable
+	6. Medida de la Respuesta: Cumplimiento del plazo establecido para sacar el producto
+	7. Atributo de calidad afectado: AT07
+
+Escenario de Adaptabilidad
+
+La pagina web deberá ser visible desde cualquier tipo de explorador de internet que hay en el mercado.
+
+	1. Fuente: Equipos de los usuarios
+	2. Estímulo: Acceso a la pagina
+	3. Entorno: Explotación
+	4. Artefacto: Pagina web
+	5. Respuesta: Debe visualizarse todo el contenido desde distintos exploradores
+	6. Medida de la Respuesta: Debe estar probado en diferentes exploradores
+	7. Atributo de calidad afectado: AT08
+
+Escenario de Usabilidad:
+	
+“Usuarios novatos usan por primera vez el sistema”
+
+	1. Fuente: Usuario
+	2. Estímulo: Usar el sistema
+	3. Entorno: Sistema finalizado y operativo
+	4. Artefacto: Sistema
+	5. Respuesta: El sistema presentará un estructura simple y fácil de utilizar
+	6. Medida de la Respuesta: El usuario debe aprender a utilizar el sistema en el menor tiempo posible
+	7. Atributo de calidad afectado: AT09
+
+Escenario de Integridad:
+	
+“Usuarios no privilegiados intentan modificar la base de datos”
+
+	1. Fuente: Usuarios no privilegiados
+	2. Estímulo: Intentar modificar la base de datos
+	3. Entorno: Sistema finalizado y operativo
+	4. Artefacto: Base de datos
+	5. Respuesta: El sistema negará dicha operación indicando el motivo
+	6. Medida de la Respuesta: El usuario no debe de haber podido realizar los cambios que quería efectuar
+	7. Atributo de calidad afectado: AT10
+
+Escenario de Fiabilidad:
+	
+“Usuarios realizan cualquier operación (siempre que estén autorizados) del sistema”
+
+	1. Fuente: Usuario
+	2. Estímulo: Realizar una operación
+	3. Entorno: Sistema finalizado y operativo
+	4. Artefacto: Sistema
+	5. Respuesta: El sistema realizará la operación de una manera rápida y sin fallos
+	6. Medida de la Respuesta: El usuario no debe abandonar el sistema debido a un largo tiempo de espera
+	7. Atributo de calidad afectado: AT11
+
+Escenario de Disponibilidad:
+	
+El sistema deberá facilitar una alta disponibilidad, el portal será accesible el 90% del tiempo, en alguna de esas ocasiones la página no será visible y en otras el servicio será denegado al usuario, pidiéndole que trate de acceder más tarde.
+
+	1. Fuente: Interacción de los usuarios
+	2. Estímulo: Interación en la página
+	3. Entorno: Explotación
+	4. Artefacto: Sistema
+	5. Respuesta: Visualización e interacción con el portal o denegación de servicio
+	6. Medida de la Respuesta: Tratar de denegar el servicio del Sistema el menor tiempo posible.
+	7. Atributo de calidad afectado: AT12
+
+Escenario de Accesibilidad:
+	
+“Usuarios de diferentes países acceden al sistema los cuales deberán adaptar su idioma”
+
+	1. Fuente: Usuario
+	2. Estímulo: Establecer el idioma para el mayor número de países
+	3. Entorno: Sistema finalizado y operativo
+	4. Artefacto: Idioma del sistema
+	5. Respuesta: Presentar el sistema al usuario con el idioma escogido
+	6. Medida de la Respuesta: El cambio de idioma debe hacerse de forma correcta y sin afectar al propio funcionamiento
+	7. Atributo de calidad afectado: AT13
+
+Escenario de Escalabilidad
+
+El sistema deberá diseñarse de forma que aunque en un inicio el número de usuarios sea bajo, si en un
+periodo corto de tiempo aumentasen, la disponibilidad y rendimiento de este no se vea afectado.
+
+	1. Fuente: incremento de usuarios
+	2. Estímulo: gran número de peticiones de logeo o de datos
+	3. Entorno: Explotación
+	4. Artefacto: Servidor central, base de datos
+	5. Respuesta: Se incrementa la capacidad de proceso del servidor y la base de datos
+	6. Medida de la Respuesta: tiempo de logeo de los usuarios, número de peticiones denegadas:0
+	7. Atributo de calidad afectado: Escalabilidad
